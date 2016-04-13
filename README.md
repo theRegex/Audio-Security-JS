@@ -1,2 +1,2 @@
 # Audio-Security-JS
-Exploiting a way to create stream audio without an audio tag .
+Exploiting a way to create audio without an audio tag .

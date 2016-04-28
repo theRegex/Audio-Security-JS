@@ -14,7 +14,7 @@
     {
    	name: "Rap Mix",
    	source: "tracks/333565.mp3"
-   },
+   }
 ]
 
   var data = {

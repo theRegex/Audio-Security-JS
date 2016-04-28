@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="casestudy">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +8,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
 
 <style type="text/css">
 
 	body{
 
-		background-color: #333;
+		
 	}
 
 	.well {
@@ -34,23 +32,14 @@
 
 </head>
 <body>
-	<div class="container">
+	<div class="container" ng-controller="trackFactor">
 	<div class="row">
-		
-		<div class="well">
-<!--Canvas Audio Player Here-->
-<div class="hd-audio" id="mediaHd"></div>
-<div class="controls-content">
-<button type="button" class="btn btn-default ply">Play</button>
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-default ps">Pause</button>
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-default stp">Stop</button>
-</div>
-</div>
+		<ul ng-repeat="x in ids">
+			<li>{{x}}</li>
+		</ul>
 </div>
 	</div>
-
-	<script type="text/javascript" src="audio.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="case.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
 
 <style type="text/css">
@@ -33,12 +33,26 @@
 </head>
 <body>
 	<div class="container" ng-controller="trackFactor">
+
 	<div class="row">
-		<ul ng-repeat="x in ids">
-			<li>{{x}}</li>
+		<ul ng-repeat="x in players" noti-watch id="playlists">
+			<li>
+			<div class="well">
+			<div id="{{ ids[$index] }}"></div>
+				<div class="controls-content">
+<button type="button"  class="btn btn-default" data-ng-attr-id="play" ng-click="action(x,play)">Play</button>
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button"  class="btn btn-default" data-ng-attr-id="pause" ng-click="action(x,pause)">Pause</button>
+<!-- Indicates a successful or positive action -->
+<button type="button"  class="btn btn-default " data-ng-attr-id="stop" ng-click="action(x,pause)">Stop</button>
+</div>
+</div>
+			</li>
 		</ul>
+
 </div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script type="text/javascript" src="angular.min.js"></script>
 	<script type="text/javascript" src="case.js"></script>
 </body>
